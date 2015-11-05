@@ -33,4 +33,14 @@ ok (1, 4) not_in (1, 2, 3);
 ok [1, 2] in [1, 2, 3], 'arr-ref ok';
 ok [1, 4] not_in [1, 2, 3];
 
+# enum
+# enum Colors < Red Green Blue >;
+# ok 'Red' in Colors, 'enum works';
+# ok 'Black' not_in Colors;
+
+# set
+my $fruits = set <peach apple orange apple apple>;
+ok 'apple' in $fruits, 'set works';
+ok 'blueberry' not_in $fruits;
+
 done-testing;

@@ -1,0 +1,11 @@
+{
+    "name"          : "Acme::in",
+    "version"       : "0.1.0",
+    "author"        : "github:fayland",
+    "description"   : "play with in infix",
+    "depends"       : [],
+    "provides" : {
+        "Acme::in" : "lib/Acme/in.pm"
+    },
+    "source-url"    : "git://github.com/fayland/perl6-Acme-in.git"
+}

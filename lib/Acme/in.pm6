@@ -19,6 +19,15 @@ multi sub infix:<in>(@a1, @a2) is export {
   return True;
 }
 
+multi sub infix:<in>(Mu $in, Mu $r) is export {
+  # if $r.can('any') {
+  #   return $in === $r.any;
+  # }
+  # say $r.perl.WHAT;
+  # say $r.perl.WHICH;
+  return $in ~~ $r;
+}
+
 multi sub infix:<not_in>(Mu $in, Mu $r) is export {
   ! ($in in $r)
 }
