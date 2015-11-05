@@ -26,4 +26,11 @@ ok 5 not_in (1 .. 3);
 ok 1 in [1 .. 3], 'ref is ok';
 ok 5 not_in [1 .. 3];
 
+# arr in arr
+ok (1, 2) in (1, 2, 3), 'arr in arr';
+ok (1, 4) not_in (1, 2, 3);
+
+ok [1, 2] in [1, 2, 3], 'arr-ref ok';
+ok [1, 4] not_in [1, 2, 3];
+
 done-testing;
