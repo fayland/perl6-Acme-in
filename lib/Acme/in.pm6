@@ -3,7 +3,7 @@ multi sub infix:<in>(Str $in, Str $full) is export {
 }
 
 multi sub infix:<in>(Mu $in, @list) is export {
-  @list.grep({ $_ eq $in })
+  $in eq @list.any;
 }
 
 multi sub infix:<in>(Mu $in, %hash) is export {
