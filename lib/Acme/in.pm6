@@ -4,6 +4,7 @@ multi sub infix:<in>(Str $in, Str $full) is export {
 
 multi sub infix:<in>(Mu $in, @list) is export {
   $in eq @list.any;
+  # @list.grep({ $_ eq $in })
 }
 
 multi sub infix:<in>(Mu $in, %hash) is export {
